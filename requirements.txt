@@ -13,11 +13,14 @@ charset-normalizer==3.3.2
 click==8.1.7
 dataclasses-json==0.6.6
 distro==1.9.0
+dnspython==2.6.1
+eventlet==0.36.1
 exceptiongroup==1.2.1
 Flask==3.0.3
 Flask-Cors==4.0.1
 Flask-SocketIO==5.3.6
 frozenlist==1.4.1
+greenlet==3.0.3
 gunicorn==22.0.0
 h11==0.14.0
 httpcore==1.0.5
