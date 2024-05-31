@@ -69,6 +69,11 @@ def handleUpdate():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 
+@app.route('/')
+def welcome():
+    return 'Welcome to Avalon'
+
+
 if __name__ == '__main__':
     app.run(port=33507, debug=True)
     socketio.run(app)
