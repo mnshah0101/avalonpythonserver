@@ -231,7 +231,7 @@ def read_documents(s3_urls):
             print(f"Document from {s3_url} added to documents list")
         else:
             print(f"Error reading document from in read_documents {s3_url}")
-            return None
+            continue
     return case_ids, documents
 
 
