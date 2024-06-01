@@ -30,6 +30,7 @@ dotenv.load_dotenv()
 openai_api_key = os.getenv('OPENAI_API_KEY')
 pinecone_api_key = os.getenv('PINECONE_API_KEY')
 go_server_url = os.getenv('GO_SERVER_URL')
+bucket = os.getenv('BUCKET_NAME')
 
 
 def read_s3_pdf_from_url(file_url):
@@ -56,7 +57,7 @@ def read_s3_pdf_from_url(file_url):
 def read_s3_text_file_from_url(s3_url):
     print(f"Reading text file from URL: {s3_url}")
     parsed_url = urlparse(s3_url)
-    bucket_name = 'avaloncasesbucket'
+    bucket_name = bucket
     file_key = parsed_url.path.lstrip('/')
     file_key = re.sub(r'\+', ' ', file_key)
     s3_client = boto3.client('s3')
@@ -89,7 +90,7 @@ def read_s3_text_file_from_url(s3_url):
 def read_s3_docx_from_url(s3_url):
     print(f"Reading DOCX file from URL: {s3_url}")
     parsed_url = urlparse(s3_url)
-    bucket_name = 'avaloncasesbucket'
+    bucket_name = bucket
     file_key = parsed_url.path.lstrip('/')
     file_key = re.sub(r'\+', ' ', file_key)
     s3_client = boto3.client('s3')
@@ -185,7 +186,7 @@ def create_embeddings(namespaces, docs):
 def read_s3_generic_file_from_url(s3_url):
     print(f"Reading generic file from URL: {s3_url}")
     parsed_url = urlparse(s3_url)
-    bucket_name = 'avaloncasesbucket'
+    bucket_name = bucket
     file_key = parsed_url.path.lstrip('/')
     # change + to space
     file_key = re.sub(r'\+', ' ', file_key)

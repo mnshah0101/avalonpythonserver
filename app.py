@@ -62,8 +62,9 @@ def handleUpdate():
     try:
         s3_urls, ids, file_names = getProcessingDocs()
         response = upload_documents(s3_urls, ids, file_names)
-        print(response)
-        return jsonify({"status": "success", "data": response}), 200
+        if (response['status'] == 'error'):
+            return jsonify({"status": "error", "message": response['message']}), 500
+        return jsonify({"status": "success", "data": response['message']}), 200
     except Exception as e:
         print(e)
         return jsonify({"status": "error", "message": str(e)}), 500
