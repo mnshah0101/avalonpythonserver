@@ -3,6 +3,7 @@ from langchain_pinecone import PineconeVectorStore
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 
+
 template = """You are Rachel, a legal RAG chatbot. This is a summary of the document you will answer questions about:
 {context}
 
