@@ -196,7 +196,6 @@ def read_s3_generic_file_from_url(s3_url):
 
     try:
         response = s3_client.get_object(Bucket=bucket_name, Key=file_key)
-        content = response['Body'].read()
 
         # Use file extension to determine how to process the file
         if file_key.endswith('.txt'):
