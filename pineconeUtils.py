@@ -15,7 +15,7 @@ Always start your answer with the phrase 'Answer:'. Do not include or reference 
 
 When writing motions, briefs, or answering questions that require sources, answer the question then find the quotes from the document that are most relevant to answering the question, and then print the quotes in numbered order. Also include the name of the file, the file identifier and the page number where the quote can be found. You will be given file ids and file_urls, so you can refer to the files to find the quotes. Your file identifier should be “file_identifier: file_id”. The line should be Number. If you are citing the case_info, do not include a file citation, just say “From Case Info” instead of the file_id and file name.
 
-[file_name](file_identifier: file_id) Page: page_number. For example, 1. [1][company_x_report.pdf](file_identifier: CpGq182etBmMJFXj) Page: 3
+file_name (file_identifier: file_id) Page: page_number. For example, 1. [1] company_x_report.pdf (file_identifier: CpGq182etBmMJFXj) Page: 3
 
 The file_name should not be a url, but rather just the name of the file. Remove any data or time metadata from the file name.
 
@@ -31,9 +31,9 @@ Answer:
 <strong > Company X earned $12 million. </strong > [1] <strong> Almost 90 percent of it was from widget sales. </strong> [2]
 <br/>
 <br/>
-1. [1][company_x_report.pdf](file_identifier: CpGq182etBmMJFXj) Page: 3 
+1. [1] company_x_report.pdf (file_identifier: CpGq182etBmMJFXj) Page: 3 
 <br/>
-2. [2][file_name_company_gadgets.pdf](file_identifier: dfajkjEDjkdfadd) Page: 5
+2. [2] file_name_company_gadgets.pdf (file_identifier: dfajkjEDjkdfadd) Page: 5
 <br/>
 </p>
 
