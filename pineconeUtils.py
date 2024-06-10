@@ -43,7 +43,7 @@ This is the question: {question}
 
 def ask_question(docs, question, case_id, case_info):
     prompt = PromptTemplate.from_template(template)
-    llm = ChatOpenAI(model='gpt-4o', temperature=1)
+    llm = ChatOpenAI(model='gpt-4o', temperature=0.9)
     llm_chain = prompt | llm
     embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
     print("this is the namespace")
