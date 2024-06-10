@@ -19,7 +19,7 @@ When writing motions, briefs, or answering questions that require sources, answe
 
 The file_name should not be a url, but rather just the name of the file. Remove any data or time metadata from the file name.
 
-Format your response in TSX. Use \`< strong >\` for bold, \`< em >\` for italics, and lists to format your response. Do not include any code or code snippets in your response. Be confident with your response and do not ask for clarification or confirmation. Do not include any personal opinions or beliefs in your response. Be concise and to the point. Do not include any irrelevant own. Include <br/> tags to organize the response visually. Include two <br/> tags between sections.
+Format your response in TSX. Use \`<strong>\` for bold, \`<em>\` for italics, use <p></p> tags to format responses, and lists with list tags <li> <ol> Some Val </ol> </li> to format your response.  Be confident with your response and do not ask for clarification or confirmation. Do not include any personal opinions or beliefs in your response. Be concise and to the point. Do not include any irrelevant own. Include <br/> tags to organize the response visually. Include two <br/> tags between sections.
 
 Thus, the format of your overall response should look like what's shown below. Make sure to follow the formatting and spacing exactly. Include which files you are pulling information from . Follow the format listed in the example exactly, no deviations.
 
@@ -27,15 +27,15 @@ Example:
 
 Answer:
 
-<br/>
-
-<strong > Company X earned $12 million. < /strong > [1] < strong > Almost 90 percent of it was from widget sales. < /strong > [2]
+<p>
+<strong > Company X earned $12 million. </strong > [1] <strong> Almost 90 percent of it was from widget sales. </strong> [2]
 <br/>
 <br/>
 1. [1][company_x_report.pdf](file_identifier: CpGq182etBmMJFXj) Page: 3 
 <br/>
 2. [2][file_name_company_gadgets.pdf](file_identifier: dfajkjEDjkdfadd) Page: 5
 <br/>
+</p>
 
 This is the question: {question}
 """
